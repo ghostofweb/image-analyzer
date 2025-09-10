@@ -21,7 +21,7 @@ function App() {
     const reader = new FileReader();
     reader.onloadend = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/analysis", {
+        const res = await fetch("https://image-analyzer-three.vercel.app/api/analysis", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ image: reader.result }), // send full dataURL
